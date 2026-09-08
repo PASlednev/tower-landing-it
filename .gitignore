@@ -1,0 +1,10 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Сборка статей: статик-токен Directus
+build/.env
