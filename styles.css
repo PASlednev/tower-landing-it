@@ -3586,7 +3586,7 @@ a:focus-visible > .footer__badge {
   border-radius: 10px;
   background: rgba(255, 192, 30, 0.04);
   padding: 1.25rem 1.4rem;
-  margin: 1.5rem 0;
+  margin: 0;
 }
 .rg-box h2 {
   margin-top: 0 !important;
@@ -3603,7 +3603,8 @@ a:focus-visible > .footer__badge {
 }
 
 /* Affiliate disclosure */
-.disclosure {
+.disclosure,
+.spoke-body .disclosure {
   font-family: var(--f-mono);
   font-size: 0.78rem;
   line-height: 1.6;
@@ -3611,33 +3612,63 @@ a:focus-visible > .footer__badge {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   padding: 0.7rem 0.9rem;
-  margin: 1.25rem 0;
+  margin: 1.5rem 0 0;
   background: rgba(255, 255, 255, 0.02);
 }
 
 /* Author byline */
-.byline {
+/* Author box (same structure as cr-it-landing, tower palette) */
+.author-box {
   display: flex;
-  gap: 0.9rem;
   align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
+  gap: 1.75rem;
+  margin: 2.5rem 0 3rem;
+  padding: 1.75rem 2rem;
+  border: 1px solid rgba(143, 109, 255, 0.18);
+  border-radius: 14px;
+  background: var(--panel);
 }
-.byline__avatar {
-  width: 52px;
-  height: 52px;
+.author-box__avatar {
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
-  flex-shrink: 0;
+  flex: none;
+  box-shadow:
+    0 0 0 2px var(--bg),
+    0 0 0 3px rgba(143, 109, 255, 0.45);
 }
-.byline__text {
-  font-size: 0.9rem;
-  color: #afcadd;
-  line-height: 1.55;
+.author-box .author-box__text {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.125rem;
+  line-height: 1.65;
 }
-.byline__text a {
+.author-box .author-box__text a {
   color: var(--lime);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.author-box .author-box__text a:hover {
+  color: var(--lime-hover);
+}
+.author-box__text time {
+  white-space: nowrap;
+}
+@media (max-width: 40rem) {
+  .author-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .author-box__avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .author-box .author-box__text {
+    font-size: 1rem;
+  }
 }
 
 /* Related links row */

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tower-rush-it.example/sitemap.xml
+Sitemap: https://towerrushstrategy.it/sitemap.xml
